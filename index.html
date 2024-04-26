@@ -8,6 +8,7 @@
 <body>
     <div id="ton-connect" style="display: flex; justify-content: flex-end;"></div>
     <button id="test">test</button>
+    <input id="number"/>
     <p id="info"></p>
     <script>
     const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
@@ -43,14 +44,15 @@
 
     async function transact() {
         const walletsList = await tonConnectUI.getWallets();
-        document.getElementById("info").innerHTML = walletsList;
+        var num = document.getElementById("number").value;
+        document.getElementById("info").innerHTML = num;
 
         const transaction = {
             validUntil: Math.floor(Date.now() / 1000) + 60, // 60 sec
             messages: 
             [
                 {address: "UQBWENJzLdShkakCt1Xi_1-RJv3yXi89OdrWo2tT_ap0gQSO",
-                amount: "2000000"}
+                amount: num}
             ]
         }
 
