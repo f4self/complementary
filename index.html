@@ -35,7 +35,7 @@
             messages: 
             [
                 {address: "UQBWENJzLdShkakCt1Xi_1-RJv3yXi89OdrWo2tT_ap0gQSO",
-                amount: "200000"}
+                amount: "2000000"}
             ]
         }
 
@@ -50,6 +50,13 @@
             console.error(e);
         }
     }
+    </script>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script>
+        // Init TWA
+        Telegram.WebApp.ready();
+        Telegram.WebApp.setHeaderColor('secondary_bg_color');
+
     </script>
 </body>
 </html>
